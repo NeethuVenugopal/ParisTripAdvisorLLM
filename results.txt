@@ -1,0 +1,27 @@
+Your input here: Hi
+ Hello! Welcome to Paris, the city of love and the future host of the Olympics 2024. I'm thrilled to help you plan your trip during this exciting time. To get started, could you please share some details with me? What are your tentative travel dates, approximately how much budget you have per day, and what are your preferred travel styles or activities (sightseeing, adventure sports, relaxation, etc.)? This information will help me create an itinerary tailored to your needs. Additionally, knowing where you'll be traveling from would be helpful as well. Stay tuned for recommendations on places to stay, dining options, and more!
+
+Do you want to continue? (y/n) : y
+
+Your input here: Give me a detailed 3 day itinerary for my paris trip mostly focussed on site seeing.
+ Hello! I'd be happy to help you plan a three-day itinerary focused mainly on sightseeing during your visit to Paris for the Olympics 2024. Here's a suggested itinerary based on general assumptions of your travel preferences, budget, and the given information:
+
+Day 1:
+1. Begin your day at the Louvre Museum (open daily except Tuesday), home to thousands of works of art, including the Mona Lisa. The best time to visit is early in the morning or late afternoon when crowds are smaller. Reach there by metro line 1 or RER A from your hotel.
+2. After lunch at a nearby café, head towards Notre-Dame Cathedral (open daily except during renovations). Spend the afternoon exploring the intricate architecture and history of this iconic Parisian landmark. You can reach it by metro lines 1, 4, 5, 6, 7, 10, or 12.
+3. In the evening, visit the Eiffel Tower (open daily except during certain closures). Admire the city lights from the top and enjoy a romantic dinner at one of the restaurants nearby. Reach there by metro lines 6, 8, or RER B.
+
+Day 2:
+1. Start your day by visiting Montmartre, a historic hill district known for its bohemian atmosphere and artistic heritage. Spend the morning exploring the Sacré-Cœur Basilica and the adjacent square, which offers panoramic views of Paris. You can reach Montmartre by metro lines 2, 12, or 13.
+2. After lunch, head towards Musée d'Orsay, where you can find works by famous artists like Monet, Renoir, and Van Gogh. The museum is open Tuesday to Sunday and closed on Monday. Reach there by metro line 6.
+3. In the evening, stroll along the Seine River and enjoy a river cruise (recommended in the late afternoon or early evening for beautiful sunset views). Docking points can be found near many metro stations like Notre-Dame, St. Michel, or Eiffel Tower.
+
+Day 3:
+1. Begin your day by visiting the Palace of Versailles (open daily except on Mondays and certain holidays), which is approximately a one-hour train ride from Paris. Spend the morning exploring the palace's grand rooms and gardens. Return to Paris in the late afternoon.
+2. In the evening, explore the Latin Quarter near the Sorbonne University, known for its bohemian atmosphere, vibrant nightlife, and many cafés and bars. Reach there by metro lines 4, 5, 6, or 10.
+
+In terms of what to pack, Paris weather can be quite unpredictable during the Olympics, so a light jacket or sweater is recommended for cooler evenings. Wear comfortable shoes as you'll likely be doing a lot of walking, and don't forget your camera for capturing all the beautiful memories!
+
+Remember to stay hydrated and take breaks when needed, as sightseeing can be quite tiring. Paris is generally considered safe for tourists during the Olympics, but always keep an eye on your belongings and avoid deserted areas at night. Enjoy your trip, and feel free to ask if you have any questions!
+
+Do you want to continue? (y/n) :
