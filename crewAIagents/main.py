@@ -80,5 +80,5 @@ if __name__ == "__main__":
   print("########################\n")
   print(result)
 
-  with open('log.txt', "w", encoding="utf-8") as f:
+  with open('result.txt', "w", encoding="utf-8") as f:
     f.write(result)
