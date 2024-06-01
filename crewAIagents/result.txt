@@ -1,144 +1,74 @@
-#### WITHOUT TOOLS #####
-
-**7-Day Paris Itinerary for July 2024**
-
-**Day 1 - Arrival and Exploration**
-
-* Morning: Arrive at Paris Charles de Gaulle Airport and take a taxi or shuttle to your hotel (approximately 1 hour, 30 minutes)
-* Check-in at the 3-star Hotel Le Walt (approximately AED 500 per night) in the heart of the city
-* Lunch: Visit the famous Café de Flore (approximately AED 50 per meal) and indulge in French cuisine
-* Afternoon: Explore the iconic Champs-Élysées, stroll through the nearby Luxembourg Gardens, and admire the stunning views of the Eiffel Tower
-* Evening: Enjoy a Seine River Cruise (approximately AED 100 per person) and take in the breathtaking city views
-
-**Day 2 - Iconic Landmarks**
-
-* Morning: Visit the Eiffel Tower (approximately AED 15 per person) and take the elevator to the top for panoramic views
-* Lunch: Grab a quick bite at a charming café, such as Café de la Paix (approximately AED 20 per meal)
-* Afternoon: Visit the world-renowned Louvre Museum (approximately AED 15 per person), exploring the vast collection of art and artifacts
-* Evening: Enjoy a traditional French dinner at Le Comptoir du Relais (approximately AED 150 per person)
-
-**Day 3 - Hidden Gems**
-
-* Morning: Explore the charming neighborhood of Montmartre, wandering through its cobblestone streets and alleys
-* Lunch: Treat yourself to a delightful pastry at Café des Deux Moulins (approximately AED 20 per meal)
-* Afternoon: Visit the trendy Le Marais neighborhood, exploring its fashionable boutiques and art galleries
-* Evening: Enjoy a scenic Seine River cruise (approximately AED 100 per person) and take in the city's romantic atmosphere
-
-**Day 4 - Adventure and Activities**
-
-* Morning: Visit the largest park in Paris, Parc des Buttes-Chaumont, and take a leisurely stroll
-* Lunch: Grab a quick bite at a charming café, such as Café de la Paix (approximately AED 20 per meal)
-* Afternoon: Visit the Paris Zoo (approximately AED 20 per person) and discover its diverse animal collection
-* Evening: Rent a bike and explore the city's bike-friendly streets and scenic bike paths (approximately AED 20 per hour)
-
-**Day 5 - Relaxation and Leisure**
-
-* Morning: Treat yourself to a rejuvenating spa day at the luxurious Spa Valmont (approximately AED 300 per person)
-* Lunch: Indulge in a delightful meal at the 5-star hotel restaurant, Le Bristol (approximately AED 200 per person)
-* Afternoon: Take a leisurely stroll along the Seine River and admire the city's landmarks
-* Evening: Enjoy a delightful dinner at the charming Bistrot de la Gare (approximately AED 150 per person)
-
-**Day 6 - Explore and Enjoy**
-
-* Morning: Visit the iconic Notre-Dame Cathedral (approximately AED 5 per person) and admire its stunning Gothic architecture
-* Lunch: Grab a quick bite at a charming café, such as Café de la Paix (approximately AED 20 per meal)
-* Afternoon: Explore the trendy Le Marais neighborhood, browsing its fashionable boutiques and art galleries
-* Evening: Enjoy a delightful dinner at the 5-star hotel restaurant, Le Plaza Athénée (approximately AED 200 per person)
-
-**Day 7 - Departure**
-
-* Morning: Check-out of the hotel and head to Charles de Gaulle Airport for your departure flight
-* Farewell to the City of Light!
-
-**Budget Breakdown:**
-
-* Flights: AED 2,500 to AED 3,500 (approximately USD 680 to USD 950)
-* Accommodation: AED 1,500 to AED 2,000 (approximately USD 405 to USD 540) for 6 nights
-* Food and activities: AED 2,000 to AED 3,000 (approximately USD 540 to USD 810) for the entire trip
-
-**Tips and Recommendations:**
-
-* Pack wisely: Bring comfortable shoes, sunscreen, and a light jacket for cooler evenings
-* Language: While many Parisians speak English, it's always helpful to learn some basic French phrases
-* Food: Indulge in French cuisine, from croissants to croque-monsieur, and don't forget to try the famous French pastries!
-
-Get ready for an unforgettable adventure in Paris!
-
-#####WITH SEARCH AND SCRAPPING TOOLS######
-
-## Here is you Trip Plan
-########################
-
-Here is your complete 7-day travel plan for Paris, France:
+**Welcome to Paris: A 7-Day Itinerary**
 
 **Day 1: Arrival in Paris**
-Arrive at Charles de Gaulle Airport (CDG) or Orly Airport (ORY). Take a taxi or bus to your hotel.
- Check-in at Hotel Le Walt (approx. $200 per night). Spend the afternoon exploring the nearby streets, 
- cafes, and shops. For dinner, head to Le Comptoir du Relais (approx. $30 per meal) for a taste of 
- classic French cuisine. Recommended packing: comfortable shoes, light jacket or sweater for cooler evenings.
+
+* Morning: Arrive at Charles de Gaulle Airport and take a taxi or train to your hotel.
+* Afternoon: Check-in to your hotel and freshen up.
+* Evening: Head to the Latin Quarter for dinner and a stroll along the Seine River.
 
 **Day 2: Parisian Landmarks**
-Start the day with a delicious French breakfast at Café de Flore (approx. $10 per person). 
-Visit the iconic Eiffel Tower (approx. $17 per person) and take in the stunning views of the city.
- After lunch, head to the nearby Champ de Mars park and enjoy a picnic or snack from a local market.
-  In the evening, catch a show at the world-famous Moulin Rouge (approx. $100 per person). 
-  Recommended packing: comfortable shoes, layers for changing weather.
 
-**Day 3: Art and Culture**
-Spend the morning exploring the world-renowned Louvre Museum (approx. $20 per person), home to the Mona Lisa.
- After lunch, visit the nearby Orsay Museum (approx. $10 per person) for an impressive collection of 
- Impressionist and Post-Impressionist art. For dinner, head to Le Grand Vefour (approx. $50 per person)
-  for a taste of refined French cuisine. Recommended packing: comfortable shoes, layers for changing weather.
+* Morning: Visit the Eiffel Tower and take the elevator to the top for breathtaking views.
+* Afternoon: Explore the nearby Champ de Mars park and enjoy a picnic lunch.
+* Evening: Watch the Eiffel Tower sparkle with fireworks.
 
-**Day 4: Montmartre and Sacré-Cœur**
-Explore the charming neighborhood of Montmartre, including the beautiful Sacré-Cœur Basilica (approx. $5 per person).
- Take in the stunning views of the city from the top of the basilica. For lunch, head to 
- Le Comptoir du Relais (approx. $30 per meal) for a taste of classic French cuisine. 
- In the evening, enjoy a scenic river cruise along the Seine (approx. $20 per person). 
- Recommended packing: comfortable shoes, layers for changing weather.
+**Day 3: Museums and Galleries**
 
-**Day 5: Palace of Versailles**
-Take a day trip to the majestic Palace of Versailles (approx. $20 per person), a former royal residence
- with stunning gardens and fountains. For lunch, head to the nearby town of Versailles for a taste of 
- local cuisine. In the evening, enjoy a classic French dinner at Le Grand Vefour (approx. $50 per person).
-  Recommended packing: comfortable shoes, layers for changing weather.
+* Morning: Visit the world-famous Louvre Museum and see the Mona Lisa.
+* Afternoon: Explore the nearby Palais-Royal and the Jardin des Tuileries.
+* Evening: Enjoy a cabaret show at the famous Moulin Rouge.
 
-**Day 6: Parisian Markets**
-Spend the morning exploring the historic Marché aux Puces de Saint-Ouen (approx. $5 per person) for
- vintage treasures and souvenirs. After lunch, head to the trendy Marché d'Aligre (approx. $5 per person)
-  for a taste of local produce and artisanal goods. For dinner, head to Le Comptoir du Relais (approx. $30 per meal)
-   for a taste of classic French cuisine. Recommended packing: comfortable shoes, layers for changing weather.
+**Day 4: Montmartre and the Seine**
+
+* Morning: Explore the charming neighborhood of Montmartre and its bohemian vibe.
+* Afternoon: Take a Seine River cruise and learn about the city's history and landmarks.
+* Evening: Enjoy a romantic dinner at a bistro.
+
+**Day 5: Day Trip to Versailles**
+
+* Morning: Take a day trip to the Palace of Versailles and explore its opulent halls and gardens.
+* Afternoon: Return to Paris and explore the trendy Marais neighborhood.
+* Evening: Enjoy a dinner of French cuisine and wine.
+
+**Day 6: More Parisian Landmarks**
+
+* Morning: Visit the iconic Notre-Dame Cathedral and explore the nearby Sainte-Chapelle.
+* Afternoon: Explore the historic Latin Quarter and its charming streets.
+* Evening: Enjoy a farewell dinner in the heart of Paris.
 
 **Day 7: Departure**
-Spend the morning shopping for souvenirs or exploring the nearby streets. Depart for the airport and 
-head home. Recommended packing: comfortable shoes, layers for changing weather.
 
-**Budget Breakdown:**
+* Morning: Check-out of your hotel and head to the airport for your departure.
 
-* Accommodation: $1,400 (approx. $200 per night for 7 nights)
-* Transportation: $100 (approx. $14 per person for airport transfers and local transportation)
-* Food: $500 (approx. $71 per day for meals and snacks)
-* Attractions: $150 (approx. $21 per person for museum and palace entrance fees)
-* Miscellaneous: $200 (approx. $29 per day for souvenirs and incidentals)
+**Budget Breakdown**
 
-Total: $2,350
+* Flights: $1,500
+* Accommodation: $1,000 (avg. $143 per night)
+* Food and Drink: $500 (avg. $71 per day)
+* Transportation: $100 (metro tickets and taxis)
+* Attractions and Activities: $300 (avg. $43 per day)
+* Total: $3,400
 
-**Tips and Essentials:**
+**Packing Suggestions**
 
-* Weather: Paris is known for its mild and temperate climate, with average temperatures ranging from 
-4.3°C (39.7°F) in January to 24.2°C (75.6°F) in July.
-* Safety: Be mindful of pickpocketing in crowded areas and tourist hotspots. Keep an eye on your belongings,
- especially in public transportation.   
-* Language: French is the primary language spoken in Paris, but many Parisians also speak English. 
-Learn a few basic French phrases to enhance your experience.
-* Currency: The official currency is the Euro (€).
-* Tipping: Leave 5-10% in restaurants and cafes, but not in bars.
+* Comfortable walking shoes
+* Lightweight clothing for warm weather
+* Rain jacket or umbrella
+* Power adapter for France (Type E)
+* Camera and charger
+* Reusable water bottle
+* Travel documents and insurance
 
-**Additional Information:**
+**Weather Forecast**
 
-* Paris has two major airports: Charles de Gaulle Airport (CDG) and Orly Airport (ORY).
-* The city has a comprehensive public transportation system, including the métro, buses, and tramways.
-* Paris is known for its vibrant cultural scene, with numerous museums, theaters, and concert halls.
-* The city is also famous for its fashion, with numerous high-end boutiques and department stores.
+* Average high temperature: 79°F (26°C)
+* Average low temperature: 59°F (15°C)
+* Expect warm and sunny weather with occasional rain showers.
 
-I hope this comprehensive guide helps you plan an unforgettable trip to Paris!
+**Additional Tips**
+
+* Learn a few basic French phrases to show respect and appreciation.
+* Be prepared for crowds and lines at popular attractions.
+* Don't forget to try French cuisine and wine!
+
+I hope you have a wonderful trip to Paris!

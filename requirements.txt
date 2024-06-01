@@ -1,2 +1,3 @@
 crewai
 unstructured
+langchain_groq
