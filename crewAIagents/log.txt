@@ -47,3 +47,121 @@ Total: $2,350
 * The city is also famous for its fashion, with numerous high-end boutiques and department stores.
 
 I hope this comprehensive guide helps you plan an unforgettable trip to Paris!
+
+
+*****After panel*****
+
+* Evening: Enjoy a Seine River Cruise (€20 per person) and take in the breathtaking views of the city's landmarks.
+
+**Day 3: Art, Culture, and Cabaret**
+
+* Morning: Visit the world-renowned Louvre Museum (€18 per person) and explore the impressive collection of art and artifacts.
+* Afternoon: Explore the beautiful gardens and contemporary art installations at the Palais-Royal.
+* Evening: Enjoy a cabaret show at the world-famous Moulin Rouge (€100 per person).
+
+**Day 4: Unique Experiences and Local Customs**
+
+* Morning: Visit the famous Marché aux Puces de Saint-Ouen (free admission) and discover unique souvenirs and antiques.
+* Afternoon: Enjoy a picnic lunch in the Luxembourg Gardens (free admission).
+* Evening: Attend the Paris Jazz Festival (free admission) and enjoy performances by renowned artists.
+
+**Budget Breakdown:**
+
+* Flights: ¥250,000 to ¥350,000 (approximately $2,300 to $3,200 USD)
+* Accommodation: ¥5,000 to ¥10,000 (approximately $45 to $90 USD) per night
+* Food and Transportation: ¥5,000 to ¥10,000 (approximately $45 to $90 USD) per day
+* Total: ¥250,000 to ¥350,000 (approximately $2,300 to $3,200 USD)
+
+**Packing Suggestions:**
+
+* Lightweight clothing for warm weather
+* Comfortable shoes for walking
+* Power adapter for France (Type E/F)
+* Camera for capturing stunning views and landmarks
+
+**Safety Tips:**
+
+* Be aware of pickpocketing in crowded areas and tourist hotspots
+* Keep valuables secure and be mindful of your belongings
+* Avoid walking alone in dimly lit areas at night
+
+**Eco-Friendly Travel Options:**
+
+* Use public transportation or walk whenever possible
+* Choose eco-friendly accommodations and restaurants
+* Reduce, Reuse, Recycle: minimize your waste and use reusable bags and water bottles
+
+**Special Reasons:**
+
+* Paris is the City of Light, and its beauty and charm are unmatched. From the iconic Eiffel Tower to the charming streets of Montmartre, every moment in Paris is a treasure.
+* The city's rich history, stunning architecture, and vibrant cultural scene make it a destination like no other.
+
+I hope you enjoy your trip to Paris!
+2024-06-03 19:45:34,784 Error in MyCustomHandler.on_chain_end callback: KeyError('travel_concierge')
+
+> Finished chain.
+ [DEBUG]: == [Amazing Travel Concierge] Task output: **Paris, the City of Light, Awaits!**
+
+**Day 1: Arrival and Exploration**
+
+* Morning: Arrive at Charles de Gaulle Airport and take a taxi or shuttle to your hotel.
+* Afternoon: Check-in at the Hotel Le Walt (€150 per night) and freshen up.
+* Evening: Enjoy a welcome dinner at Le Comptoir du Relais (€30 per meal) and explore the charming streets of Montmartre.
+
+**Day 2: Iconic Landmarks and Hidden Gems**
+
+* Morning: Visit the iconic Eiffel Tower (€17 per person) and enjoy the stunning views of the city.
+* Afternoon: Explore the charming streets of Le Marais and visit the trendy boutiques and art galleries.
+* Evening: Enjoy a Seine River Cruise (€20 per person) and take in the breathtaking views of the city's landmarks.
+
+**Day 3: Art, Culture, and Cabaret**
+
+* Morning: Visit the world-renowned Louvre Museum (€18 per person) and explore the impressive collection of art and artifacts.
+* Afternoon: Explore the beautiful gardens and contemporary art installations at the Palais-Royal.
+* Evening: Enjoy a cabaret show at the world-famous Moulin Rouge (€100 per person).
+
+**Day 4: Unique Experiences and Local Customs**
+
+* Morning: Visit the famous Marché aux Puces de Saint-Ouen (free admission) and discover unique souvenirs and antiques.
+* Afternoon: Enjoy a picnic lunch in the Luxembourg Gardens (free admission).
+* Evening: Attend the Paris Jazz Festival (free admission) and enjoy performances by renowned artists.
+
+**Budget Breakdown:**
+
+* Flights: ¥250,000 to ¥350,000 (approximately $2,300 to $3,200 USD)
+* Accommodation: ¥5,000 to ¥10,000 (approximately $45 to $90 USD) per night
+* Food and Transportation: ¥5,000 to ¥10,000 (approximately $45 to $90 USD) per day
+* Total: ¥250,000 to ¥350,000 (approximately $2,300 to $3,200 USD)
+
+**Packing Suggestions:**
+
+* Lightweight clothing for warm weather
+* Comfortable shoes for walking
+* Power adapter for France (Type E/F)
+* Camera for capturing stunning views and landmarks
+
+**Safety Tips:**
+
+* Be aware of pickpocketing in crowded areas and tourist hotspots
+* Keep valuables secure and be mindful of your belongings
+* Avoid walking alone in dimly lit areas at night
+
+**Eco-Friendly Travel Options:**
+
+* Use public transportation or walk whenever possible
+* Choose eco-friendly accommodations and restaurants
+* Reduce, Reuse, Recycle: minimize your waste and use reusable bags and water bottles
+
+**Special Reasons:**
+
+* Paris is the City of Light, and its beauty and charm are unmatched. From the iconic Eiffel Tower to the charming streets of Montmartre, every moment in Paris is a treasure.
+* The city's rich history, stunning architecture, and vibrant cultural scene make it a destination like no other.
+
+I hope you enjoy your trip to Paris!
+
+
+2024-06-03 19:58:16,615 WebSocket connection closed: code=1001, reason=None
+
+ *  History restored 
+
+PS E:\Omdena\paris_tripadvisor\Code\ParisTripAdvisorLLM>                               
