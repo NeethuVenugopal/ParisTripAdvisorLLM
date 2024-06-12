@@ -9,7 +9,27 @@ from datetime import date
 
 class TripTasks():
 
-  def identify_task(self, agent, origin, cities, interests, range):
+  def collect_details(self, agent):
+    return Task(description=dedent(f"""
+        Take input from user to collect details about the trip. For example, you can ask
+        the following questions to the user:
+        - Which city you are traveling to?
+        - Which city you are traveling from?
+        - What is the possible date of the trip?
+        - What are your travel interests
+        Once you confirm the user has no more details to give, finish.
+          {self.__tip_section()}"""),
+        expected_output = dedent("""
+        A detailed input from the traveler, including:
+        The name of the destination
+        The name of the origin
+        The date of the trip
+        The traveler's interests
+        """),
+        agent=agent,
+        human_input=False)
+  
+  def identify_task(self, agent):
     return Task(description=dedent(f"""
         Analyze and select the best city for the trip based 
         on specific criteria such as weather patterns, seasonal
@@ -23,11 +43,6 @@ class TripTasks():
         about it, including the actual flight costs, weather 
         forecast and attractions.
         {self.__tip_section()}
-
-        Traveling from: {origin}
-        City Options: {cities}
-        Trip Date: {range}
-        Traveler Interests: {interests}
         """),
         expected_output = dedent("""
         A detailed report that includes:
@@ -37,9 +52,10 @@ class TripTasks():
         4. Estimated travel costs, including flight and accommodation.
         5. Key attractions and activities related to traveler interests.
         """),
-        agent=agent)
+        agent=agent,
+    )
 
-  def gather_task(self, agent, origin, interests, range):
+  def gather_task(self, agent):
     return Task(description=dedent(f"""
         As a local expert on this city you must compile an 
         in-depth guide for someone traveling there and wanting 
@@ -57,10 +73,6 @@ class TripTasks():
         rich in cultural insights and practical tips, 
         tailored to enhance the travel experience.
         {self.__tip_section()}
-
-        Trip Date: {range}
-        Traveling from: {origin}
-        Traveler Interests: {interests}
         """),
         expected_output = dedent("""
         A comprehensive city guide that includes:
@@ -76,7 +88,7 @@ class TripTasks():
         """),
         agent=agent)
 
-  def plan_task(self, agent, origin, interests, range):
+  def plan_task(self, agent):
     return Task(description=dedent(f"""
         Expand this guide into a travel 
         itinerary with detailed per-week plans, including 
@@ -97,9 +109,6 @@ class TripTasks():
         TRIP EVER, Be specific and give it a reason why you picked
         # up each place, what make them special! {self.__tip_section()}
 
-        Trip Date: {range}
-        Traveling from: {origin}
-        Traveler Interests: {interests}
         """),
         expected_output = dedent("""
         A travel itinerary formatted as markdown that includes:

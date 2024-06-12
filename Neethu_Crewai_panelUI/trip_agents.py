@@ -11,10 +11,12 @@ import os
 from calculator_tools import CalculatorTools
 from crewai_tools import ScrapeWebsiteTool, SerperDevTool
 from langchain_community.llms import HuggingFaceEndpoint
+from langchain.agents import load_tools
 
 from dotenv import load_dotenv
 load_dotenv()
 
+tools = load_tools(["human"], input_func=get_input)
 serper_tool = SerperDevTool(api_key=os.environ["SERPER_API_KEY"])
 search_venues_tool = ScrapeWebsiteTool(website_url="https://olympics.com/en/paris-2024/venues")
 search_eateries_tool =ScrapeWebsiteTool(website_url="https://www.theinfatuation.com/paris/guides/where-eat-paris-new")
@@ -32,6 +34,16 @@ llm = ChatGroq(temperature=0.1, groq_api_key=os.environ["GROQ_API_KEY"], model_n
 # )
 
 class TripAgents():
+
+  def travels_representative(self):
+    return Agent(
+        role='Travels Representative',
+        goal='Ask questions one by one and take inputs from the customer/user regarding their travel plan',
+        backstory='An experienced representative in understanding and collectiong information from the customer',
+        verbose=True,
+        llm=llm,
+        tools = tools,
+        allow_delegation=False,)
 
   def city_selection_agent(self):
     return Agent(
