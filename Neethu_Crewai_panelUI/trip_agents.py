@@ -16,7 +16,6 @@ from langchain.agents import load_tools
 from dotenv import load_dotenv
 load_dotenv()
 
-tools = load_tools(["human"], input_func=get_input)
 serper_tool = SerperDevTool(api_key=os.environ["SERPER_API_KEY"])
 search_venues_tool = ScrapeWebsiteTool(website_url="https://olympics.com/en/paris-2024/venues")
 search_eateries_tool =ScrapeWebsiteTool(website_url="https://www.theinfatuation.com/paris/guides/where-eat-paris-new")
