@@ -13,8 +13,11 @@ from crewai_tools import ScrapeWebsiteTool, SerperDevTool
 from langchain_community.llms import HuggingFaceEndpoint
 from langchain.agents import load_tools
 
+
 from dotenv import load_dotenv
 load_dotenv()
+
+tools = load_tools(["human"])
 
 serper_tool = SerperDevTool(api_key=os.environ["SERPER_API_KEY"])
 search_venues_tool = ScrapeWebsiteTool(website_url="https://olympics.com/en/paris-2024/venues")

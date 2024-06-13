@@ -4,31 +4,23 @@ from trip_tasks import TripTasks
 import datetime
 from langchain_core.callbacks import BaseCallbackHandler
 from typing import TYPE_CHECKING, Any, Dict, Optional
+import streamlit as st
+from streamlit_chat import message
 
-import panel as pn 
-pn.extension(design="bootstrap")
 
 import threading
 
-# Sidebar elements
+#sidebar elements
+st.sidebar.title("Sidebar")
+provider_name = st.sidebar.radio("Choose the provider:", ("OpenAI", "Groq"))
 
-today = datetime.datetime.now().date()
-next_year = today.year + 1
-jan_16_next_year = datetime.date(next_year, 1, 10)
+if provider_name == "OpenAI":
+    model_name = st.sidebar.radio("Choose a model:", ("GPT-3.5", "GPT-4"))
+else:
+    model_name = st.sidebar.radio("Choose a model:", ("LLAMA3-8B", "LLAMA3-70B"))
 
-title = pn.pane.Markdown("Enter Your Trip Details")
-text_input_src = pn.widgets.TextInput(name='Where are you currently located', placeholder='Japan')
-text_input_dest = pn.widgets.TextInput(name='City and Country you are interested to visit', placeholder='Paris')
-# date_range = pn.widgets.DateRangePicker(
-#     name='Date Range Picker', 
-#     start=today, 
-#     end=jan_16_next_year,
-#     value = (today, today + datetime.timedelta(days=6)),
-# )
-date_ranges = pn.widgets.TextInput(name='Probable dates of visit', placeholder='July 2024')
-text_area_input = pn.widgets.TextAreaInput(name='High level interests and hobbies or extra details about your trip?', 
-                                           placeholder='2 adults who love swimming, dancing, hiking, and eating')
-button = pn.widgets.Button(name='Submit', button_type='primary')
+
+
 
 
 user_input = None
@@ -40,17 +32,12 @@ def initiate_chat(message):
     global initiate_chat_task_created
     # Indicate that the task has been created
     initiate_chat_task_created = True
-
-    location = text_input_src.value
-    cities = text_input_dest.value
-    date_range = date_ranges.value
-    interests = text_area_input.value
-    # trip_crew = TripCrew(location, cities, date_range, interests)
     trip_crew = TripCrew()
     result = trip_crew.run()
+    return result
 
 
-def callback(contents: str, user: str, instance: pn.chat.ChatInterface):
+def callback(contents: str, user: str):
     # location = text_input_src.value
     # cities = text_input_dest.value
     # date_range = date_ranges.value
@@ -83,13 +70,13 @@ class MyCustomHandler(BaseCallbackHandler):
         self, serialized: Dict[str, Any], inputs: Dict[str, Any], **kwargs: Any
     ) -> None:
         """Print out that we are entering a chain."""
-
-        chat_interface.send(inputs['input'], user="assistant", respond=False)
-
+        st.session_state.messages.append({"role": "assistant", "content": inputs['input']})
+        st.chat_message("assistant").write(inputs['input'])
+   
     def on_chain_end(self, outputs: Dict[str, Any], **kwargs: Any) -> None:
         """Print out that we finished a chain."""
-    
-        chat_interface.send(outputs['output'], user=self.agent_name, avatar=avators[self.agent_name], respond=False)
+        st.session_state.messages.append({"role": self.agent_name, "content": outputs['output']})
+        st.chat_message(self.agent_name, avatar=avators[self.agent_name]).write(outputs['output'])
 
 
 
@@ -116,6 +103,9 @@ class TripCrew:
         local_expert_agent.callbacks = [MyCustomHandler("local_expert")]
         travel_concierge_agent = agents.travel_concierge()
         travel_concierge_agent.callbacks = [MyCustomHandler("travel_concierge")]
+
+
+        
 
         collect_tasks = tasks.collect_details(
             travels_representative_agent,
@@ -157,26 +147,30 @@ class TripCrew:
         )
 
         result = crew.kickoff()
-        chat_interface.send("## Final Result\n"+str(result), user="assistant", respond=False)
+        # chat_interface.send("## Final Result\n"+str(result), user="assistant", respond=False)
 
         return result
 
+st.title("💬 Paris Trip Planner") 
 
+if "messages" not in st.session_state:
+    st.session_state["messages"] = [{"role": "assistant", "content": """Hi welcome to Paris Trip planner.
+    Please provide trip details including your trip origin, planned date and interests"""}]
 
-# def on_Submit(event):
-#     if not event:
-#         return
-#     trip_crew = TripCrew(location, cities, date_range, interests)
-#     result = trip_crew.run()
+for msg in st.session_state.messages:
+    st.chat_message(msg["role"]).write(msg["content"])
+# Define a variable to enable/disable chat_input()
+if 'is_chat_input_disabled' not in st.session_state:
+    st.session_state.is_chat_input_disabled = False
+if prompt := st.chat_input("your message", disabled=st.session_state.is_chat_input_disabled) or st.session_state.is_chat_input_disabled:
 
-# pn.bind(on_Submit, button, watch=True)
+    st.session_state.messages.append({"role": "user", "content": prompt})
+    st.chat_message("user").write(prompt)
+    trip_crew = TripCrew()
+    result = trip_crew.run()
 
-chat_interface = pn.chat.ChatInterface(callback=callback)
-chat_interface.send(
-    {"user": "System", "value": "Fill the details in sidebar and click send"},
-    respond=False,
-)
-template = pn.template.BootstrapTemplate(
-    sidebar=[title, text_input_src, text_input_dest, date_ranges, text_area_input], main=[chat_interface]
-)
-template.servable()
+    result = f"## Here is the Final Result \n\n {result}"
+    st.session_state.messages.append({"role": "assistant", "content": result})
+    st.chat_message("assistant").write(result)
+    st.session_state.is_chat_input_disabled = True
+    
