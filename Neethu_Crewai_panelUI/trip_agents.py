@@ -14,10 +14,11 @@ from langchain_community.llms import HuggingFaceEndpoint
 from langchain.agents import load_tools
 
 
+
 from dotenv import load_dotenv
 load_dotenv()
 
-tools = load_tools(["human"])
+# tools = load_tools(["human"])
 
 serper_tool = SerperDevTool(api_key=os.environ["SERPER_API_KEY"])
 search_venues_tool = ScrapeWebsiteTool(website_url="https://olympics.com/en/paris-2024/venues")
@@ -36,7 +37,11 @@ llm = ChatGroq(temperature=0.1, groq_api_key=os.environ["GROQ_API_KEY"], model_n
 # )
 
 class TripAgents():
-
+  
+  def __init__(self, humantool) -> None:
+        self.tools = humantool
+  # def humantool(self):
+  #    return load_tools(["human"])
   def travels_representative(self):
     return Agent(
         role='Travels Representative',
@@ -44,7 +49,7 @@ class TripAgents():
         backstory='An experienced representative in understanding and collectiong information from the customer',
         verbose=True,
         llm=llm,
-        tools = tools,
+        tools = self.tools,
         allow_delegation=False,)
 
   def city_selection_agent(self):
@@ -53,10 +58,10 @@ class TripAgents():
         goal='Select the best city based on weather, season, and prices',
         backstory=
         'An expert in analyzing travel data to pick ideal destinations',
-        # tools=[
-        #     serper_tool,
+        tools=[
+            serper_tool,
 
-        # ],
+        ],
         verbose=True,
         llm=llm,
         allow_delegation=False)
@@ -67,12 +72,12 @@ class TripAgents():
         goal='Provide the BEST insights about the selected city',
         backstory="""A knowledgeable local guide with extensive information
         about the city, it's attractions and customs""",
-        # tools=[
-        #     serper_tool,
-        #     search_venues_tool,
-        #     search_eateries_tool,
-        #     search_pubs_tool,
-        # ],
+        tools=[
+            serper_tool,
+            search_venues_tool,
+            search_eateries_tool,
+            search_pubs_tool,
+        ],
         verbose=True,
         llm=llm,
         allow_delegation=False)
@@ -84,13 +89,13 @@ class TripAgents():
         packing suggestions for the city""",
         backstory="""Specialist in travel planning and logistics with 
         decades of experience""",
-        # tools=[
-        #     serper_tool,
-        #     search_venues_tool,
-        #     search_eateries_tool,
-        #     search_pubs_tool,
-        #     CalculatorTools.calculate,
-        # ],
+        tools=[
+            serper_tool,
+            search_venues_tool,
+            search_eateries_tool,
+            search_pubs_tool,
+            CalculatorTools.calculate,
+        ],
         verbose=True,
         llm=llm,
         allow_delegation=False)

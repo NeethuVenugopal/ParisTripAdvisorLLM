@@ -6,8 +6,14 @@ from langchain_core.callbacks import BaseCallbackHandler
 from typing import TYPE_CHECKING, Any, Dict, Optional
 import streamlit as st
 from streamlit_chat import message
+from langchain.agents import load_tools
+from langchain_core.agents import AgentAction, AgentFinish
+import os
+from langchain_groq import ChatGroq
+from crewai.process import Process
 
 
+llm = ChatGroq(temperature=0.1, groq_api_key=os.environ["GROQ_API_KEY"], model_name="llama3-8b-8192")
 import threading
 
 #sidebar elements
@@ -27,33 +33,33 @@ user_input = None
 initiate_chat_task_created = False
 
 
-def initiate_chat(message):
+# def initiate_chat(message):
 
-    global initiate_chat_task_created
-    # Indicate that the task has been created
-    initiate_chat_task_created = True
-    trip_crew = TripCrew()
-    result = trip_crew.run()
-    return result
+#     global initiate_chat_task_created
+#     # Indicate that the task has been created
+#     initiate_chat_task_created = True
+#     trip_crew = TripCrew()
+#     result = trip_crew.run()
+#     return result
 
 
-def callback(contents: str, user: str):
-    # location = text_input_src.value
-    # cities = text_input_dest.value
-    # date_range = date_ranges.value
-    # interests = text_area_input.value
-    # trip_crew = TripCrew(location, cities, date_range, interests)
-    # result = trip_crew.run()
-    # instance.send(result, user="assistant", respond=False)
-    global initiate_chat_task_created
-    global user_input
+# def callback(contents: str, user: str):
+#     # location = text_input_src.value
+#     # cities = text_input_dest.value
+#     # date_range = date_ranges.value
+#     # interests = text_area_input.value
+#     # trip_crew = TripCrew(location, cities, date_range, interests)
+#     # result = trip_crew.run()
+#     # instance.send(result, user="assistant", respond=False)
+#     global initiate_chat_task_created
+#     global user_input
 
-    if not initiate_chat_task_created:
-        thread = threading.Thread(target=initiate_chat, args=(contents,))
-        thread.start()
+#     if not initiate_chat_task_created:
+#         thread = threading.Thread(target=initiate_chat, args=(contents,))
+#         thread.start()
 
-    else:
-        user_input = contents
+#     else:
+#         user_input = contents
 
 avators = {"travels_representative_agent":"https://cdn-icons-png.flaticon.com/512/320/320336.png",
             "city_selector_agent":"https://cdn-icons-png.flaticon.com/512/320/320336.png",
@@ -66,17 +72,30 @@ class MyCustomHandler(BaseCallbackHandler):
     def __init__(self, agent_name: str) -> None:
         self.agent_name = agent_name
 
-    def on_chain_start(
-        self, serialized: Dict[str, Any], inputs: Dict[str, Any], **kwargs: Any
-    ) -> None:
-        """Print out that we are entering a chain."""
-        st.session_state.messages.append({"role": "assistant", "content": inputs['input']})
-        st.chat_message("assistant").write(inputs['input'])
+    # def on_chain_start(
+    #     self, serialized: Dict[str, Any], inputs: Dict[str, Any], **kwargs: Any
+    # ) -> None:
+    #     """Print out that we are entering a chain."""
+    #     st.session_state.messages.append({"role": "assistant", "content": inputs['input']})
+    #     st.chat_message("assistant").write(inputs['input'])
    
     def on_chain_end(self, outputs: Dict[str, Any], **kwargs: Any) -> None:
         """Print out that we finished a chain."""
         st.session_state.messages.append({"role": self.agent_name, "content": outputs['output']})
         st.chat_message(self.agent_name, avatar=avators[self.agent_name]).write(outputs['output'])
+    def on_agent_action(
+        self, action: AgentAction, color: Optional[str] = None, **kwargs: Any
+    ) -> Any:
+        for line in action.log.split("\n"):
+                st.session_state.messages.append({"role": self.agent_name , "content": line})
+                st.chat_message(self.agent_name, avatar=avators[self.agent_name]).write(line)
+                print(line)
+    def on_tool_start(
+        self, serialized: Dict[str, Any], input_str: str, **kwargs: Any) -> Any:
+        """Run when tool starts running."""
+        st.session_state.messages.append({"role": self.agent_name, "content": input_str})
+        st.chat_message(self.agent_name, avatar=avators[self.agent_name]).write(input_str)
+        
 
 
 
@@ -92,22 +111,26 @@ class TripCrew:
     #     self.date_range = date_range
 
     def run(self):
-        agents = TripAgents()
+
+        humantool = load_tools(["human"], callbacks=[MyCustomHandler("human_tool")])
+
+        agents = TripAgents(humantool)
         tasks = TripTasks()
 
         travels_representative_agent = agents.travels_representative()
-        travels_representative_agent.callbacks = [MyCustomHandler("travels_representative")]
+        travels_representative_agent.callbacks = [MyCustomHandler("travels_representative_agent")]
         city_selector_agent = agents.city_selection_agent()
-        city_selector_agent.callbacks = [MyCustomHandler("city_selector")]
+        city_selector_agent.callbacks = [MyCustomHandler("city_selector_agent")]
         local_expert_agent = agents.local_expert()
-        local_expert_agent.callbacks = [MyCustomHandler("local_expert")]
+        local_expert_agent.callbacks = [MyCustomHandler("local_expert_agent")]
         travel_concierge_agent = agents.travel_concierge()
-        travel_concierge_agent.callbacks = [MyCustomHandler("travel_concierge")]
+        travel_concierge_agent.callbacks = [MyCustomHandler("travel_concierge_agent")]
 
-
+        # humantool = agents.humantool()
+        # humantool.callbacks = [MyCustomHandler("human_tool")]
         
 
-        collect_tasks = tasks.collect_details(
+        collectDetails = tasks.collect_details(
             travels_representative_agent,
         )
         identify_task = tasks.identify_task(
@@ -117,32 +140,32 @@ class TripCrew:
             # self.interests,
             # self.date_range
         )
-        identify_task.context = [collect_tasks]
+        identify_task.context = [collectDetails]
         gather_task = tasks.gather_task(
             local_expert_agent,
             # self.origin,
             # self.interests,
             # self.date_range
         )
-
+        gather_task.context = [collectDetails, identify_task]
         plan_task = tasks.plan_task(
             travel_concierge_agent,
             # self.origin,
             # self.interests,
             # self.date_range
         )
-
+        plan_task.context = [collectDetails, identify_task, gather_task]
         crew = Crew(
             agents=[
                 travels_representative_agent, city_selector_agent, local_expert_agent, travel_concierge_agent
             ],
-            tasks=[collect_tasks, identify_task, gather_task, plan_task],
+            tasks=[collectDetails, identify_task, gather_task, plan_task],
             full_output=False,
             verbose=True,
             embedder= {
             "provider": "huggingface",
             "config":{
-                "model": 'NV-Embed-v1'
+                "model": 'all-MiniLM-L6-v2'
             }}
         )
 

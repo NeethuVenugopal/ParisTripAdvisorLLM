@@ -31,7 +31,7 @@ class TripTasks():
   
   def identify_task(self, agent):
     return Task(description=dedent(f"""
-        Analyze and select the best city for the trip based 
+        Using the details from collect_details task, analyze and select the best city for the trip based 
         on specific criteria such as weather patterns, seasonal
         events, and travel costs. This task involves comparing
         multiple cities, considering factors like current weather
@@ -57,7 +57,7 @@ class TripTasks():
 
   def gather_task(self, agent):
     return Task(description=dedent(f"""
-        As a local expert on this city you must compile an 
+        Using the isights from identify_task task,As a local expert on this city you must compile an 
         in-depth guide for someone traveling there and wanting 
         to have THE BEST trip ever!
         Gather information about  key attractions, local customs,
@@ -90,7 +90,7 @@ class TripTasks():
 
   def plan_task(self, agent):
     return Task(description=dedent(f"""
-        Expand this guide into a travel 
+        Using the isights from gather_task task,expand this guide into a travel 
         itinerary with detailed per-week plans, including 
         weather forecasts, places to eat, packing suggestions, safety advice
         and a budget breakdown.
